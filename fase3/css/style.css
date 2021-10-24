@@ -7,7 +7,7 @@ header {
 .logo {
     display: grid;
     grid-column: 1/2;
-    background-color:whitesmoke;
+    background-color:#F1E9E5;
     text-align: center;
     width: 200;
     height: 100%; 
@@ -48,6 +48,8 @@ main {
 .piedepagina {
     display: grid;
     background-color: #B4B897;
+    color: maroon;
+    font-style: italic;
 }
 
 h3.titulo3 {
