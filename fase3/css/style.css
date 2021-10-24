@@ -1,0 +1,73 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #464660;
+}
+
+.logo {
+    display: grid;
+    grid-column: 1/2;
+    background-color:whitesmoke;
+    text-align: center;
+    width: 200;
+    height: 100%; 
+}
+
+.encabezado {
+    display: grid;
+    grid-column: 2/5;
+    text-align: center;
+    color: beige;
+    font-size: 70px;
+    width: 100%;
+    height: fit-content;
+}
+
+.menu {
+    display: grid;
+    background-color: #368B85;
+    color: beige;
+    width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.contenido {
+    background-color: #F1E9E5;
+    grid-column: 1/5;
+}
+
+.barralateral {
+    background-color: #368B85;
+    grid-column: 5/6;
+}
+
+.piedepagina {
+    display: grid;
+    background-color: #B4B897;
+}
+
+h3.titulo3 {
+    text-align: center;
+    color: black;
+    size: 30px;
+}
+
+h4.titulo4 {
+    text-align: center;
+    color: black;
+    size: 24px;
+}
+
+p.parrafo {
+    text-align: justify;
+    color: black;
+    size: 20px;
+    font: arial;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
