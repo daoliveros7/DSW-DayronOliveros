@@ -41,14 +41,14 @@ main {
 }
 
 .barralateral {
-    background-color: #368B85;
+    background-color: #B4B897;
     grid-column: 5/6;
 }
 
 .piedepagina {
     display: grid;
-    background-color: #B4B897;
-    color: maroon;
+    background-color:#368B85;
+    color: beige;
     font-style: italic;
 }
 
