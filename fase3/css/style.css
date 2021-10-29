@@ -21,13 +21,6 @@ header {
     width: 100%;
 }
 
-.menu {
-    display: grid;
-    background-color: #368B85;
-    color: beige;
-    width: 100%;
-}
-
 main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -45,6 +38,7 @@ main {
 
 .piedepagina {
     display: grid;
+    text-align: center;
     background-color:#368B85;
     color: beige;
     font-style: italic;
@@ -121,4 +115,34 @@ h5.titulo5 {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 5px;
+}
+
+/* Estilos del menú desplegable */
+
+.menu ul {
+    display: flex;
+    background-color: #368B85;
+    color: beige;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.menu a {
+    display: block;
+    padding: 2em;
+    background-color: #368B85;
+    color: beige;
+    font-weight: bold;
+    text-decoration: none;
+}
+.menu a:hover {
+    background-color: #B4B897;
+    text-indent: 20pt;
+}
+.menu ul li ul {
+    display: none;
+}
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    display: block;
 }
