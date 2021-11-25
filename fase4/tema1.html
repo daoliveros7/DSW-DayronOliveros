@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3 -  Curso diseño de sitios web</title>
+    <link rel=icon href=favicon/favicon.png sizes="18x18" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!-- Encabezado -->
+     <header>
+        <img class="logo" src="img/logounad.png" />
+        <h1 class="encabezado">OVA Diseño de sitios WEB</h1>
+    </header>
+
+     <!-- Menú de navegación -->
+     <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Temas</a>
+                <ul>
+                <li><a href="tema1.html">Sintaxis y Selectores CSS</a></li>
+                <li><a href="tema2.html">Interacción Humano-Ordenador</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Recursos Digitales</a>
+                <ul>
+                    <li><a href="rec1.html">Recurso 1</a></li>
+                    <li><a href="rec2.html">Recurso 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Aprendizaje</a>
+                <ul>
+                    <li><a href="#">Actividad 1</a></li>
+                    <li><a href="#">Actividad 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Acerca de</a>
+                <ul>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Contenido-->
+    <main>
+        <section class="contenido">
+            <article>
+                <h3 class="titulo3">Tema 1: Sintaxis y Selectores CSS</h3>
+                <article>
+                    <h4 class="titulo4">Fundamentos de CSS</h4>
+                    <h4 class="titulo4">¿Qué es CSS?</h4>
+                    <p class="parrafo">CSS (Cascade Style Sheets) corresponde a un lenguaje de programación que es bastante similar a HTML que hace posible que se puedan aplicar estilos a los distintos elementos que componen una pagina web, de forma tal que los títulos, listas y párrafos puedan verse igual en todas y cada una de las páginas. (Celaya, 2014). De esta forma, se garantiza una uniformidad de estilos visuales en los sitios web que se desarrollen.</p>
+                    <br>
+                    <img  class="imagenes" src="img/css.png" alt="Logo CSS3">
+                </article>
+            </article>
+
+            <article>
+                <h4 class="titulo4">Sintaxis básica</h4>
+                <p class="parrafo"> Los estilos CSS se componen de tres partes: un selector, una propiedad y un valor, y su sintaxis es la siguiente: <br><br>
+                    <strong><i>selector {propiedad:valor;}</i></strong><br> 
+                <ul>
+                    <li><strong>Selector:</strong> Nos permite indicar a qué etiqueta HTML se aplicará un estilo.</li>
+                    <li><strong>Propiedad:</strong> Nos permite indicar qué propiedad de la etiqueta va a aplicarse al estilo, por ejemplo, color de fondo, fuente, tamaño y estilo de letra, orientación, entre otros.</li>
+                    <li><strong>Valor:</strong> Define el valor de la propiedad relacionada.</li>
+                </ul>
+                <img class="imagenes" src="img/sintaxis.png" alt="sintaxis css" width="70%"> <br>
+                <center><i>Estructura básica de CSS.</i></center> <br> <br>
+        
+                Ejemplo: <br><br>
+                <strong><i>body {background-color: red;}</i></strong><br>
+                En este estilo, se define que el color de fondo de la página será rojo. El selector corresponde a body, la propiedad en este caso es background-color: y el valor de la propiedad es red. <br>
+                Es posible definir más de una propiedad dentro de un mismo estilo CSS, separando cada una usando punto y coma, por ejemplo: <br><br>
+                <strong><i>h1{text-align:justify; color:green;}</i></strong><br>
+                En este caso, se define la alineación justificada del texto y el color verde para todos los títulos de nivel 1.</p>
+            </article>
+
+            <article>
+                <h4 class="titulo4">Agrupación de elementos y estilos</h4>
+                <p class="parrafo">De acuerdo con las palabras de Celaya, es posible definir estilos diferentes para un mismo tipo de etiqueta HTML, creando clases mediante el atributo class y luego indicando en CSS las propiedades de cada clase en particular. <br>
+                
+                Por ejemplo, en una página web hay dos listas de enlaces, una de comidas y otra de bebidas: </p>
+                <pre>
+                    &lt;p&gt; Comidas: &lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt; &lt;a href=”sopas.htm”&gt;Sopas&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”entradas.htm”&gt;Entradas&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”fuertes.htm”&gt;Platos fuertes&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;p&gt; Bebidas: &lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt; &lt;a href=”jugos.htm”&gt;Jugos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”cervezas.htm”&gt;Cervezas&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”calientes.htm”&gt;Bebidas calientes&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                </pre>
+                
+                <p class="parrafo">Supongamos que se necesita que los enlaces de las comidas aparezcan en color verde, mientras que los de las bebidas en color naranja. El resto de los enlaces en esta página deberán aparecer en color azul. Con el atrubito class, se definen dos clases: comidas y bebidas, como propiedades dentro de la etiqueta &lt;a&gt; que define los enlaces: </p>
+        
+                <pre>
+                    &lt;p&gt; Comidas: &lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt; &lt;a href=”sopas.htm” <b>class=”comidas”</b>&gt;Sopas&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”entradas.htm” <b>class=”comidas”</b>&gt;Entradas&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”fuertes.htm” <b>class=”comidas”</b>&gt;Platos fuertes&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;p&gt; Bebidas: &lt;/p&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt; &lt;a href=”jugos.htm” <b>class=”bebidas”</b>&gt;Jugos&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”cervezas.htm” <b>class=”bebidas”</b>&gt;Cervezas&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt; &lt;a href=”calientes.htm” <b>class=”bebidas”</b>&gt;Bebidas calientes&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                </pre>
+        
+                <p class="parrafo">Se utiliza la siguiente sintaxis CSS para asignar las propiedades de cada clase: <br> <br>
+                    <strong><i>
+                        a{color:blue;} <br>
+                        a.comidas{color:green;} <br>
+                        a.bebidas{color:orange;} <br>
+                    </i></strong>
+                </p>
+            </article>
+        
+            <article>
+                <h4 class="titulo4">Identificación de estilos con el atributo ID</h4>
+                <p class="parrafo">Dentro de cada etiqueta HTML, es posible incluir un identificador por medio del atributo ID. No pueden existir dos elementos dentro del mismo documento con el mismo id. Este id sirve para aplicar un estilo especial solamente a un elemento de la página. En CSS, se indica que un estilo se asigna a un identificador concreto usando el carácter numeral #. (Celaya, 2014). <br>
+                
+                Por ejemplo, en la siguiente disposición de líneas de texto de tipo h1 y h2, se tienen los nombres de los capítulos de un libro. Como se observa, cada línea lleva un id diferente.</p>
+                <pre>
+                &lt;h1 <b>id=”c1”</b>&gt; Capítulo 1 &lt;/h1&gt;
+                    &lt;h2 <b>id=”c1-1”</b>&gt; Capitulo 1.1 &lt;/h2&gt;
+                    &lt;h2 <b>id=”c1-2”</b>&gt; Capitulo 1.2 &lt;/h2&gt;
+                &lt;h1 <b>id=”c2”</b>&gt; Capítulo 2 &lt;/h1&gt;
+                    &lt;h2 <b>id=”c2-1”</b>&gt; Capitulo 2.1 &lt;/h2&gt;
+                    &lt;h2 <b>id=”c2-2”</b>&gt; Capitulo 2.2 &lt;/h2&gt;
+                …
+                </pre>
+            <p class="parrafo">Si quisiéramos aplicar un formato especial, por ejemplo, color azul solamente al capítulo 2-1, se escribiría la sintaxis CSS de la siguiente forma: <br>
+               
+            <strong><i>#c2-1 {color: blue;}</i></strong>   </p>
+            </article>
+            
+            <article>
+                <h4 class="titulo4">¿Cómo se aplica CSS a un documento HTML?</h4> 
+                    <p class="parrafo">Existen tres formas de aplicar estilos CSS dentro de HTML, siendo la opción número 3 la que más se recomienda aplicar: <br><br>
+                    <strong>1.	Usando el atributo Style</strong> <br> <br>
+        
+                    El atributo style es de CSS, pero se puede insertar dentro de etiquetas HTML directamente. Por ejemplo, para aplicar el color verde al fondo de la página, en el documento HTML se escribiría, dentro de la etiqueta body lo siguiente: <br>
+                    
+                    <pre>
+                        &lt;html&gt;
+                        &lt;head&gt;
+                                &lt;title&gt;Título de mi Web&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body <b>style=”background-color:green;”</b>&gt;
+                            &lt;p&gt;Página web con fondo verde.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        </pre>
+                    <br><br>
+                    </p>
+                    <p class="parrafo">
+                    <strong>2.  Por medio de la etiqueta style</strong>	<br><br>
+                    En esta forma, se inserta también código CSS dentro de un archivo HTML, mediante una etiqueta HTML llamada style. Por ejemplo, para conseguir el mismo resultado que en el caso 1, se escribe: <br>
+        
+                    <pre>
+                        &lt;html&gt;
+                        &lt;head&gt;
+                                &lt;title&gt;Título de mi Web&lt;/title&gt;
+                                <strong>
+                                &lt;style type=”text/css”&gt;
+                                    body {background-color:green;}
+                                &lt;/style&gt;
+                                </strong>
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;p&gt;Página web con fondo verde.&lt;/p&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        </pre>
+                        <br><br>
+                    </p>
+                    <p class="parrafo">
+                    <strong>3.	Por medio de archivo CSS externo</strong> <br><br>
+                    En esta forma, se puede ahorrar mucho trabajo, por eso, esta es la forma más recomendable para aplicar estilos CSS.  Por ejemplo, Si se desea cambiar el color de fondo de un sitio web compuesto por 100 páginas, se puede llevar a cabo en unos segundos modificando parte del código de la hoja de estilo principal en lugar de hacerlo en cada página individual. <br>
+                    
+                    Una hoja de estilos CSS consiste en un archivo de texto, al igual que un archivo HTML, solo que presenta la extensión .css. Por tanto, la forma de crearlas y editarlas es igual que con los archivos HTML, y se puede usar también el bloc de notas o cualquier editor de texto. 
+                    En el archivo estarán escritas todas las reglas de estilos en lenguaje CSS, guardando el archivo con un nombre como por ejemplo estilos.css. <br>
+                    
+                    Después, en cada archivo HTML al que se le quiera aplicar la hoja de estilos, simplemente es necesario insertar una línea de código dentro del encabezado, indicando la ruta del archivo CSS, de la siguiente forma: <br>
+        
+                    <pre>
+                        &lt;html&gt;
+                        &lt;head&gt;
+                                &lt;title&gt;Título de mi Web&lt;/title&gt;
+                                <strong>
+                                &lt;link rel=”stylesheet” type=”text/css” href=”estilos.css” /&gt;
+                                </strong>
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                        …
+                        </pre>           
+                    </p>
+            </article>
+        
+            <article>
+                <h4>Referencias:</h4>
+                <ol>
+                    <li> <i>Celaya Luna, A. (2014). Creación de páginas web: HTML 5. Málaga, Spain: Editorial ICB. Recuperado de https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045?page=19.</i></li>
+                    <li><i>Recio García, J. A. (2016). HTML5, CSS3 y JQuery: curso práctico. RA-MA Editorial. Recuperado de https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/106494?page=52</i></li>
+                    <li><i>Terán Anciano, J. (2016). Manual de Introducción al lenguaje HTML. Formación para el Empleo. Editorial CEP, S.L. Recuperad de  https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/50964?page=134</i></li>
+                </ol>
+            </article>
+        
+        </section>
+
+        
+
+        <!-- Barra lateral-->
+        <aside class="barralateral">
+            <center>
+            <h4 class="titulo4">Redes sociales UNAD</h4>
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2FUniversidadUNAD%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </center>
+        </aside>
+        </main>
+    
+    <!-- Pie de página-->
+     <footer class="piedepagina">
+        <h4>
+            Correo: daoliverosa@unadvirtual.edu.co <br>
+            Skype: daoliveros7
+        </h4>
+        <p>Fecha de actualización: 29/10/2021 <br>
+        Todos los derechos reservados.
+        </p>
+    </footer>
+</body>
+</html>
