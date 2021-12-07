@@ -5,6 +5,11 @@
 }
 */
 
+.centrado {
+    text-align: center;
+    align-items: center;
+}
+
 .logo {
     display: grid;
     grid-column: 1/2;
